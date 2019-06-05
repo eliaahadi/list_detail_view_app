@@ -59,7 +59,7 @@ module.exports = {
   devtool: 'eval',
   mode: 'development',
   entry: [
-    'webpack-dev-server/client?http://localhost:7000',
+    'webpack-dev-server/client?http://localhost:5000',
     './src/index'
   ],
   output: {
