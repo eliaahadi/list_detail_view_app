@@ -1,7 +1,25 @@
 # list_detail_view_app
 Simple app calling json API with list and detail views
 
-# Setup
+# Setup and run app
+- In one terminal, git clone and cd into repo
+```
+$ git clone repo
+$ cd list_detail_view_app
+list_detail_view_app $ cd api-server
+list_detail_view_app $ bundle install
+list_detail_view_app $ bundle install
+list_detail_view_app $ bundle exec foreman start
+```
+- open http://localhost:5001 to see JSON data.
+- In another terminal, run commands:
+```
+list_detail_view_app $ npm install
+list_detail_view_app $ npm run-script serve
+```
+- open http://localhost:8081 to see app.
+
+# Setup from scratch
 - git clone and cd into repo
 ```
 $ git clone repo
