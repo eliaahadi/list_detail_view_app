@@ -1,26 +1,28 @@
 var path = require('path');
 var webpack = require('webpack');
-
+ 
 module.exports = {
-  devtool: 'eval',
-  mode: 'development',
-  entry: [
-    'webpack-dev-server/client?http://localhost:5000',
-    './src/index'
-  ],
-  output: {
-    path: path.join(__dirname, 'dist'),
-    filename: 'bundle.js',
-    publicPath: '/static/'
+  entry: './index.js',
+  output: { path: path.resolve(__dirname, 'public'), filename: 'bundle.js' },
+  module: {
+    rules: [
+      {
+        test: /.jsx?$/,
+        loader: 'babel-loader',
+        exclude: /node_modules/,
+        query: {
+          presets: ['react', 'es2015'],
+          plugins: ['transform-class-properties']
+        }
+      },
+      {
+        test: /.css?$/,
+        loader: ['style-loader', 'css-loader'],
+        exclude: /node_modules/
+      }
+    ]
   },
   resolve: {
-    extensions: ['.js', 'jsx', '.ts', '.tsx']
+    extensions: ['jsx', '.js', '.ts', '.tsx']
   },
-  module: {
-    rules: [{
-      test: /\.tsx?$/,
-      loader: "awesome-typescript-loader",
-      include: path.join(__dirname, 'src')
-    }]
-  }
 };

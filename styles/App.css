@@ -1,0 +1,66 @@
+.container {
+  text-align: center;
+}
+
+.list {  
+  display: flex; 
+  flex-flow: row wrap; 
+  align-items: center;
+  align-content: center;
+  justify-content: space-around;
+}
+
+.list-item {
+  margin: 10px;
+}
+
+.list-bullet {
+  list-style-type: none;
+
+}
+
+.list-image {
+  margin: 10px;
+}
+
+.sold-out {
+  background-color: red;
+  font-size: 18px;
+  width: 50%;
+  margin: auto;
+}
+
+.item-stock {
+  background-color: lightblue;
+  font-size: 18px;
+  width: 50%;
+  margin: auto;
+}
+
+.triangle-topleft {
+  width: 0;
+  height: 0;
+  border-top: 100px solid red;
+  border-right: 100px solid transparent;
+  border-bottom: 100px solid transparent;
+}
+
+div {
+  font-size: 1rem;
+}
+
+.back-button {
+  margin: 10px;
+  font-size: 20px;
+}
+
+.buy-button {
+  font-size: 20px;
+}
+
+.price-buy-section {
+  background-color: turquoise;
+  font-size: 20px;
+  width: 50%;
+  margin: auto;
+}
