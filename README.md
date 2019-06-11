@@ -153,3 +153,37 @@ export default class App extends React.Component {
 list_detail_view_app $ npm start
 ```
 - Go to localhost:5000, you will see the "Hello World" on the website.
+
+## API-Server
+- The api server is created in folder nodejs-server.
+- To setup, run commands:
+```
+list_detail_view_app $ cd nodejs-server
+nodejs-server $ yarn install
+nodejs-server $ yarn start
+```
+- Go to localhost:5001 and see if a json is rendered on page for backend part of app.
+- Now back to client side, add this code to do a GET request using axios in App.tsx. Make sure axios is npm installed too beforehand.
+```
+import axios from 'axios';
+
+export default class App extends React.Component {
+  constructor(props){
+    super(props);
+  }
+  
+  async componentDidMount(){
+    const allData = await axios({
+      method: 'GET',
+      url: 'http://localhost:5001/',
+      responseType: 'json',
+    })
+    .then(response => {
+      console.log("axios success ", response);
+    })
+    .catch(error => console.log("axios GET failed -> ", error));
+  }
+
+  render() {
+    ...
+```
