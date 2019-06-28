@@ -115,7 +115,6 @@ module.exports = {
 }
 
 ```
-
 - Create the server.js file 
 ```
 var webpack = require('webpack');
